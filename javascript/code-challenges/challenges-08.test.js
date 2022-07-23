@@ -121,8 +121,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let array = str.match(/\w+/g);
-  return array.filter(e => (e.charCodeAt(0) === e.toUpperCase().charCodeAt(0)) && !parseInt(e));
+  return str.match(/\b[A-Z].*?\b/g) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
