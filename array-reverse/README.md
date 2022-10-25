@@ -7,3 +7,5 @@
 ### Description
 
 Reverse an array of any size by using linear time and constant space.
+
+Solve time: 30 min
