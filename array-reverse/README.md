@@ -1,11 +1,25 @@
-# Java Code Challenge 1
+# Early 401 Code Challenges
 
-## Solution
+## Java Code Challenge 1
+
+### Solution
 
 ![reverseArray ](./images/codechallenge1.png)
 
-### Description
+#### Description
 
 Reverse an array of any size by using linear time and constant space.
 
 Solve time: 30 min
+
+## Java Code Challenge 2
+
+### Solution 2
+
+![reverseArray ](./images/codechallenge2.png)
+
+#### Description 2
+
+Take in an array and a new element and insert that new element into the midpoint of the array. Output a new array with a length one larger than the input array which includes the new element.
+
+Solve time: 40 min
