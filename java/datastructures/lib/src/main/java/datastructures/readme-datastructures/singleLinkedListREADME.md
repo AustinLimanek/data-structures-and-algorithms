@@ -1,5 +1,5 @@
 # Single Linked List
 
-[Code](../linkelist)
+[Code](../linkedlist)
 
 ## Challenge
