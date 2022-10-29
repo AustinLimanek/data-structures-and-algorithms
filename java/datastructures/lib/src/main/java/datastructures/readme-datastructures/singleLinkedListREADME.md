@@ -1,7 +1,8 @@
 # Single Linked List
 
 [Implementation Code](../linkedlist)
-[Testing Code](../../../../test/java)
+
+[Testing Code](../../../../test/java/codechallenges/linkedlist)
 
 ## Challenge
 
