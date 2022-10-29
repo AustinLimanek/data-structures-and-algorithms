@@ -22,11 +22,11 @@ To run your tests
 
 | Table of Contents - Data Structures |
 | ------------------------------- |
-| [Implementation: Singly Linked List](./java/datastructures/lib/src/main/java/datastructures/linkedlist)
+| [Implementation: Singly Linked List](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/singleLinkedListREADME.md)
 
 | Table of Contents - Code Challenges |
 | ------------------------------- |
 | [Whiteboarding: Array Reversal](./array-reverse/README.md)
 | [Whiteboarding: Array Insert Shift](./array-reverse/README.md)
 | [Whiteboarding: Binary Search](./array-reverse/README.md)
-
+| [Interview Practice: 2D Array Inner-Array Sum](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/2DArrayMatrixInnerElementArraySum-readme.md)
