@@ -2,7 +2,7 @@
 
 [Implementation Code](../linkedlist)
 
-[Testing Code](../../../../test/java/codechallenges/linkedlist)
+[Testing Code](../../../../test/java/datastructures/linkedlist/LinkedListTest.java)
 
 ## Challenge
 
