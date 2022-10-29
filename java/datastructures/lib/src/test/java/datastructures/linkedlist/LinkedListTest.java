@@ -9,7 +9,7 @@ public class LinkedListTest
   //instantiate an empty linked list
   @Test void linkedListExists()
     {
-      LinkedList sut = new LinkedList();
+      LinkedList<String> sut = new LinkedList<>();
       assertNull(sut.head);
     }
 
@@ -37,12 +37,12 @@ public class LinkedListTest
   }
 
   //Can properly return a collection of all the values that exist in the linked list
-  @Test void testToAString()
+  @Test void testToString()
   {
     LinkedList sut = new LinkedList();
     sut.insert("world");
     sut.insert("hello");
-    assertEquals("{ hello } -> { world } -> Null", sut.toAString());
+    assertEquals("{ hello } -> { world } -> Null", sut.toString());
   }
 
 
