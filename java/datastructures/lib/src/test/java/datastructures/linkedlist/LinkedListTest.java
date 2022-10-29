@@ -18,7 +18,7 @@ public class LinkedListTest
   //can properly insert multiple nodes into the linked list
   @Test void insertIntoList()
   {
-    LinkedList sut = new LinkedList();
+    LinkedList<String> sut = new LinkedList<>();
     sut.insert("world");
     sut.insert("hello");
     assertEquals("hello", sut.head.value);
@@ -29,7 +29,7 @@ public class LinkedListTest
   //Will return false when not finding a value within the linked list
   @Test void testIncludes()
   {
-    LinkedList sut = new LinkedList();
+    LinkedList<String> sut = new LinkedList<>();
     sut.insert("world");
     sut.insert("hello");
     assertTrue(sut.includes("world"));
@@ -39,10 +39,10 @@ public class LinkedListTest
   //Can properly return a collection of all the values that exist in the linked list
   @Test void testToString()
   {
-    LinkedList sut = new LinkedList();
-    sut.insert("world");
-    sut.insert("hello");
-    assertEquals("{ hello } -> { world } -> Null", sut.toString());
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(2);
+    sut.insert(1);
+    assertEquals("{ 1 } -> { 2 } -> Null", sut.toString());
   }
 
 
