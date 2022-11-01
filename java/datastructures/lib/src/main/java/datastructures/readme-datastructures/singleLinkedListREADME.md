@@ -13,8 +13,13 @@ Create a linked list data type by defining two classes. First, Node which will t
 - [x] insert: adds a new node with a value in O(1) time
 - [x] includes: searches a linkedlist for a specified value -> returns boolean
 - [x] toString: converts the linkedlist into a string of the form "{ e1 } -> { e2 } -> { e3 } -> null"
+- [x] endAppend: adds a new node to a linked list with a given value
+- [x] insertBefore: adds a new node with a given value before the first node in a linked list that has a given relative value
+- [x] insertAfter: adds a new node with a given value after the first node in a linked list that has a given relative value
 
 ## Specifications & Tests
+
+### Day 1
 
 - [x] Can successfully instantiate an empty linked list
 - [x] Can properly insert into the linked list
@@ -23,3 +28,13 @@ Create a linked list data type by defining two classes. First, Node which will t
 - [x] Will return true when finding a value within the linked list that exists
 - [x] Will return false when searching for a value in the linked list that does not exist
 - [x] Can properly return a collection of all the values that exist in the linked list
+- [ ] Can successfully add a node to the end of the linked list
+
+### Day 2
+
+- [x] Can successfully add a node to the end of the linked list
+- [x] Can successfully add multiple nodes to the end of a linked list
+- [x] Can successfully insert a node before a node located i the middle of a linked list
+- [x] Can successfully insert a node before the first node of a linked list
+- [x] Can successfully insert after a node in the middle of the linked list
+- [x] Can successfully insert a node after the last node of the linked list
