@@ -76,6 +76,43 @@ public class LinkedList<T>
     }
   }
 
+  //size is the total number of nodes in the linked list. A newly instantiated linked list has a length of zero.
+  public int size(){
+    Node<T> current = this.head;
+    int size = 0;
+    while(current != null){
+      size++;
+      current = current.next;
+    }
+    return size;
+  }
+
+  //n starts at zero, which is located on the head of the linked list
+  public T nthValue(int n){
+    if (n < 0) throw new IllegalArgumentException("Node does not exist");
+    Node <T> current = this.head;
+    if (current == null) throw new IllegalArgumentException("The head node does not hava a preset value");
+    for (int i = 0; i < n; i++){
+      current = current.next;
+      if (current == null) throw new IllegalArgumentException("Node does not exist");
+    }
+    return current.value;
+  }
+
+  public T kthFromEnd(int k){
+    if (k < 0) throw new IllegalArgumentException("Node does not exist");
+    int size = this.size();
+    if (k >= size) throw new IllegalArgumentException("Node does not exist");
+    int nodeNum = size - k - 1;
+    return nthValue(nodeNum);
+  }
+
+  public T midNodeValue(){
+    int size = this.size();
+    int mid = size / 2;
+    return this.nthValue(mid);
+  }
+
 
   public static void main(String[] args){
     LinkedList<String> linkedList = new LinkedList<>();
