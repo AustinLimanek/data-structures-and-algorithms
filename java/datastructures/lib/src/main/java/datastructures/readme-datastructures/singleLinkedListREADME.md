@@ -11,11 +11,11 @@ Create a linked list data type by defining two classes. First, Node which will t
 ## Features
 
 - [x] insert: adds a new node with a value in O(1) time
-- [x] includes: searches a linkedlist for a specified value -> returns boolean
-- [x] toString: converts the linkedlist into a string of the form "{ e1 } -> { e2 } -> { e3 } -> null"
-- [x] endAppend: adds a new node to a linked list with a given value
-- [x] insertBefore: adds a new node with a given value before the first node in a linked list that has a given relative value
-- [x] insertAfter: adds a new node with a given value after the first node in a linked list that has a given relative value
+- [x] includes: searches a linkedlist for a specified value -> returns boolean [Time: O(n), Space: O(1)]
+- [x] toString: converts the linkedlist into a string of the form "{ e1 } -> { e2 } -> { e3 } -> null" [Time: O(n), Space: O(1)]
+- [x] endAppend: adds a new node to a linked list with a given value [Time: O(n), Space: O(1)]
+- [x] insertBefore: adds a new node with a given value before the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
+- [x] insertAfter: adds a new node with a given value after the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
 
 ## Specifications & Tests
 
