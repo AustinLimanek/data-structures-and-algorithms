@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class LinkedList<T>
 {
   Node<T> head;
@@ -37,6 +39,43 @@ public class LinkedList<T>
     }
     current.next = new Node<>(value);
   }
+
+  public void insertBefore(T relValue, T newValue) {
+    Node<T> current = this.head;
+    if(current.value == relValue) insert(newValue);
+    else{
+      while(current.next != null){
+        if (current.next.value.equals(relValue)){
+          Node<T> newNode = new Node<>(newValue);
+          newNode.next = current.next;
+          current.next = newNode;
+          break;
+        }
+        current = current.next;
+      }
+      if(current.next == null) throw new IllegalArgumentException("Relative value does not exist");
+    }
+  }
+
+  public void insertAfter(T relValue, T newValue) {
+    Node<T> current = this.head;
+    while(current.next != null){
+      if (current.value.equals(relValue)){
+        Node<T> newNode = new Node<>(newValue);
+        newNode.next = current.next;
+        current.next = newNode;
+        break;
+      }
+      current = current.next;
+    }
+    if(current.value == relValue & current.next == null) {
+      endAppend(newValue);
+    }
+     else if(current.value != relValue & current.next == null){
+      throw new IllegalArgumentException("Relative value does not exist");
+    }
+  }
+
 
   public static void main(String[] args){
     LinkedList<String> linkedList = new LinkedList<>();
