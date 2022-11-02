@@ -16,6 +16,10 @@ Create a linked list data type by defining two classes. First, Node which will t
 - [x] endAppend: adds a new node to a linked list with a given value [Time: O(n), Space: O(1)]
 - [x] insertBefore: adds a new node with a given value before the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
 - [x] insertAfter: adds a new node with a given value after the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
+- [x] size: return the number of nodes in a linked list [Time: O(n), Space: O(1)]
+- [x] nthValue: input: `int`. returns the value of the nth (starting from 0) node in the linked list [Time: O(n), Space: O(1)]
+- [x] kthFromEnd: input `int`. return the value of the kth (starting from 0 -> tail) node of the linked list [Time: O(n), Space: O(1)]
+- [x] midNodeValue: returns the value of a central node. Mid is the middle of an odd sized linked list and mid is the right central node in an even sized linked list [Time: O(n), Space: O(1)]
 
 ## Specifications & Tests
 
@@ -37,3 +41,13 @@ Create a linked list data type by defining two classes. First, Node which will t
 - [x] Can successfully insert a node before the first node of a linked list
 - [x] Can successfully insert after a node in the middle of the linked list
 - [x] Can successfully insert a node after the last node of the linked list
+
+### Day 3
+
+![whiteboard for kthFromEnd method]()
+
+- [x] Where k is greater than the length of the linked list
+- [x] Where k and the length of the list are the same
+- [x] Where k is not a positive integer
+- [x] Where the linked list is of a size 1
+- [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
