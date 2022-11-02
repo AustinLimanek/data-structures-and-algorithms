@@ -105,4 +105,74 @@ public class LinkedListTest
   }
 
 
+  //Checks that basic functionality works
+  @Test void kthFromEnd(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("6");
+    sut.endAppend("4");
+    sut.endAppend("2");
+    assertEquals("6", sut.kthFromEnd(2));
+  }
+
+  //Checks for k when k is too large
+  @Test void kthFromEndTooLarge(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("6");
+    sut.endAppend("4");
+    sut.endAppend("2");
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(5));
+  }
+
+  //Checks for when k is negative
+  @Test void kthFromEndAtNegative(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("6");
+    sut.endAppend("4");
+    sut.endAppend("2");
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(-1));
+  }
+
+  //Checks for when k is the same as the size of the linked list
+  @Test void kthFromEndSize(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("6");
+    sut.endAppend("4");
+    sut.endAppend("2");
+    assertThrows(IllegalArgumentException.class, () -> sut.kthFromEnd(4));
+  }
+
+ //Checks for when linked list is of size 1
+  @Test void kthFromEndSmall(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    assertEquals("1", sut.kthFromEnd(0));
+  }
+
+  //Can return the first value in a linked list
+  @Test void kthFromEndBeginning(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("2");
+    sut.endAppend("3");
+    sut.endAppend("hi");
+    sut.endAppend("no");
+    assertEquals("1", sut.kthFromEnd(4));
+  }
+
+  //Returns a value from a linked list: the middle value for an odd sized list and the right middle node in an even list.
+  @Test void middleValue(){
+    LinkedList<String> sut = new LinkedList<>();
+    sut.insert("1");
+    sut.endAppend("2");
+    sut.endAppend("3");
+    sut.endAppend("hi");
+    sut.endAppend("no");
+    sut.endAppend("no");
+    assertEquals("hi", sut.midNodeValue());
+  }
+
 }
