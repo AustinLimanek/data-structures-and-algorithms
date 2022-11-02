@@ -44,7 +44,7 @@ Create a linked list data type by defining two classes. First, Node which will t
 
 ### Day 3
 
-![whiteboard for kthFromEnd method]()
+![whiteboard for kthFromEnd method](../../../images/kthFromEnd.png)
 
 - [x] Where k is greater than the length of the linked list
 - [x] Where k and the length of the list are the same
