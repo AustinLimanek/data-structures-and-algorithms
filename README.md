@@ -30,4 +30,4 @@ To run your tests
 | [Whiteboarding: Array Insert Shift](./array-reverse/README.md)
 | [Whiteboarding: Binary Search](./array-reverse/README.md)
 | [Interview Practice: 2D Array Inner-Array Sum](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/2DArrayMatrixInnerElementArraySum-readme.md)
-| [Whiteboarding: Zipping Two Singly Linked Lists](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/zipperTwoLinedLists.md)
+| [Whiteboarding: Zipping Two Singly Linked Lists](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/zipperTwoLinkedLists.md)
