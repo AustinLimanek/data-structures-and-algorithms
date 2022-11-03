@@ -1,4 +1,4 @@
-# Challenge Summary
+# Challenge Summary: Zip Two Linked Lists
 
 Write a function that takes in two singly linked lists and output a single linked list that has the two linked lists nodes alternating. The first node should be from the `head` of the first linked list. The two linked lists do not need to be the same size. However, they must be the same type.
 
