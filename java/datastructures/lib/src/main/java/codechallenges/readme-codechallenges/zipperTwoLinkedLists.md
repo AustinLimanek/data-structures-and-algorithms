@@ -12,7 +12,7 @@ I took the apporach of using three pointers. One pointer on the first linked lis
 
 ## Solution
 
-[code](../linkedlist/LinkedListChallenges)
+[code](../linkedlist/LinkedListChallenges.java)
 
 [tests](../../../../test/java/codechallenges/linkedlist/LinkedListChallengesTest.java)
 
