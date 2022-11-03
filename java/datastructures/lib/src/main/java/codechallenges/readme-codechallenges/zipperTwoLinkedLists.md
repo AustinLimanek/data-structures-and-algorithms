@@ -14,6 +14,6 @@ I took the apporach of using three pointers. One pointer on the first linked lis
 
 [code](../../linkedlist/LinkedListChallenges)
 
-[tests](../../../../test/java/codechallenges/linkedlist/LinkedListChallengesTest)
+[tests](../../../../test/java/codechallenges/linkedlist/LinkedListChallengesTest.java)
 
 ![whiteboard](images/zippersolution.png)
