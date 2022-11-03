@@ -29,11 +29,13 @@ public class LinkedListChallengesTest
     linked1.endAppend(2);
     linked1.endAppend(3);
     linked1.endAppend(4);
+    linked1.endAppend(5);
     linked2.insert(11);
     linked2.endAppend(12);
     linked2.endAppend(13);
     LinkedList<Integer> result = sut.zipper(linked1, linked2);
-    assertEquals(7, result.size());
+    System.out.println(result.toString());
+    assertEquals(8, result.size());
   }
 
   @Test
