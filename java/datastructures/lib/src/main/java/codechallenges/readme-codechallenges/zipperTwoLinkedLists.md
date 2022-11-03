@@ -12,8 +12,10 @@ I took the apporach of using three pointers. One pointer on the first linked lis
 
 ## Solution
 
-[code](../../linkedlist/LinkedListChallenges)
+[code](../linkedlist/LinkedListChallenges)
 
 [tests](../../../../test/java/codechallenges/linkedlist/LinkedListChallengesTest.java)
+
+This shows the merging of a linked list with the values of 1, 2, 3, 4 being merged with a second linked list with values of 11, 12, 13, 14, 15, 16
 
 ![whiteboard](images/zippersolution.png)
