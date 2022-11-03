@@ -4,7 +4,7 @@ import org.w3c.dom.ls.LSOutput;
 
 public class LinkedList<T>
 {
-  Node<T> head;
+  public Node<T> head;
 
   public void insert (T value){
     Node<T> newNode = new Node<>(value);
