@@ -6,19 +6,23 @@
 
 ## Challenge
 
-Create a linked list data type by defining two classes. First, Node which will take a value on construction and has a parameter called next that is of datatype Node. This means that Node is a self-referential class. On instantiation a new node should point to null. Second, LinkedList which will have a parameter with data type node called head, which will be the starting location of the list. Methods should be in the LinkedList class.
+Create a `Queue` class that follows the FIFO (First In First Out) principle. Both the `Queue` and the `Nodes` have a generalizable typing. On instantiation the queue should be empty and have a `front` and `back` property pointing to `null`.
 
 ## Features
 
-- [x] insert: adds a new node with a value in O(1) time
-- [x] includes: searches a linkedlist for a specified value -> returns boolean [Time: O(n), Space: O(1)]
-- [x] toString: converts the linkedlist into a string of the form "{ e1 } -> { e2 } -> { e3 } -> null" [Time: O(n), Space: O(1)]
-- [x] endAppend: adds a new node to a linked list with a given value [Time: O(n), Space: O(1)]
-- [x] insertBefore: adds a new node with a given value before the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
-- [x] insertAfter: adds a new node with a given value after the first node in a linked list that has a given relative value [Time: O(n), Space: O(1)]
-- [x] size: return the number of nodes in a linked list [Time: O(n), Space: O(1)]
-- [x] nthValue: input: `int`. returns the value of the nth (starting from 0) node in the linked list [Time: O(n), Space: O(1)]
-- [x] kthFromEnd: input `int`. return the value of the kth (starting from 0 -> tail) node of the linked list [Time: O(n), Space: O(1)]
-- [x] midNodeValue: returns the value of a central node. Mid is the middle of an odd sized linked list and mid is the right central node in an even sized linked list [Time: O(n), Space: O(1)]
+- [x] enqueue: Takes in a value with any type and instantiates a `node` with the given value and adds it to the queue. If the `queue` is empty, the new `node` is both the `front` and the `back` of the `queue`. If there is already an existing `node` the new `node` is added behind all existing `nodes` in the `queue`. [Space O(1); Time O(1)]
+- [x] dequeue: A method that acts on a `queue` and removes the `node` that the `front` `node` points at and removes this node from the `queue`. The next `node` in line is the new `front`. The return is equal to the value belonging to the removed node. If the `queue` is empty, a `NullPointerException` is thrown. [Space O(1); Time O(1)]
+- [x] peek: returns the value of the `node` being pointed at by the `front` property. If the `queue` is empty a `NullPointerExcepetion` is thrown. [Space O(1); Time O(1)]
+- [x] isEmpty: returns a boolean. If the `front` property of the `queue` is null, then return true; if not, then return false. [Space O(1); Time O(1)]
 
 ## Specifications & Tests
+
+### Day 1: Initialized the class
+
+-[x] Can successfully enqueue into a queue
+-[x] Can successfully enqueue multiple values into a queue
+-[x] Can successfully dequeue out of a queue the expected value
+-[x] Can successfully peek into a queue, seeing the expected value
+-[x] Can successfully empty a queue after multiple dequeues
+-[x] Can successfully instantiate an empty queue
+-[x] Calling dequeue or peek on empty queue raises exception
