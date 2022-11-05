@@ -23,6 +23,8 @@ To run your tests
 | Table of Contents - Data Structures |
 | ------------------------------- |
 | [Implementation: Singly Linked List](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/singleLinkedListREADME.md)
+| [Implementation: Stack](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/stackREADME.md)
+| [Implementation: Queue](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/queueREADME.md)
 
 | Table of Contents - Code Challenges |
 | ------------------------------- |
