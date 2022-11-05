@@ -19,10 +19,10 @@ Create a `stack` class that behaves in the LIFO (Last In First Out) principle. T
 
 ### Day 1 - Initialized the class
 
--[x] Can successfully push onto a stack
--[x] Can successfully push multiple values onto a stack
--[x] Can successfully pop off the stack
--[x] Can successfully empty a stack after multiple pops
--[x] Can successfully peek the next item on the stack
--[x] Can successfully instantiate an empty stack
--[x] Calling pop or peek on empty stack raises exception
+- [x] Can successfully push onto a stack
+- [x] Can successfully push multiple values onto a stack
+- [x] Can successfully pop off the stack
+- [x] Can successfully empty a stack after multiple pops
+- [x] Can successfully peek the next item on the stack
+- [x] Can successfully instantiate an empty stack
+- [x] Calling pop or peek on empty stack raises exception
