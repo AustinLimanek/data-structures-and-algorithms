@@ -19,10 +19,10 @@ Create a `Queue` class that follows the FIFO (First In First Out) principle. Bot
 
 ### Day 1: Initialized the class
 
--[x] Can successfully enqueue into a queue
--[x] Can successfully enqueue multiple values into a queue
--[x] Can successfully dequeue out of a queue the expected value
--[x] Can successfully peek into a queue, seeing the expected value
--[x] Can successfully empty a queue after multiple dequeues
--[x] Can successfully instantiate an empty queue
--[x] Calling dequeue or peek on empty queue raises exception
+- [x] Can successfully enqueue into a queue
+- [x] Can successfully enqueue multiple values into a queue
+- [x] Can successfully dequeue out of a queue the expected value
+- [x] Can successfully peek into a queue, seeing the expected value
+- [x] Can successfully empty a queue after multiple dequeues
+- [x] Can successfully instantiate an empty queue
+- [x] Calling dequeue or peek on empty queue raises exception
