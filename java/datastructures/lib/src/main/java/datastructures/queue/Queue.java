@@ -8,7 +8,7 @@ public class Queue<T> {
   public Node<T> back;
 
   public boolean isEmpty (){
-    return back == null;
+    return front == null;
   }
 
   public void enqueue (T value) {
