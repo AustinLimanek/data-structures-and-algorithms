@@ -1,10 +1,8 @@
 package datastructures.linkedlist;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class LinkedList<T>
 {
-  public Node<T> head;
+  public Node<T> head = null;
 
   public void insert (T value){
     Node<T> newNode = new Node<>(value);
@@ -113,18 +111,50 @@ public class LinkedList<T>
     return this.nthValue(mid);
   }
 
+  public Node<T> cyclicLinkedList(){
+    Node<T> slow = this.head;
+    Node<T> fast = this.head;
 
-  public static void main(String[] args){
-    LinkedList<String> linkedList = new LinkedList<>();
-    linkedList.insert( "world");
-    linkedList.insert( "hello");
+    while(fast != null && fast.next != null){
+      slow = slow.next;
+      fast = fast.next.next;
+      if(slow == fast) break;
+    }
 
-    System.out.println(linkedList.head.value);
-    System.out.println(linkedList.head.next.value);
-    System.out.println(linkedList.includes("hi"));
-    System.out.println(linkedList);
-    linkedList.endAppend("to you");
-    System.out.println(linkedList);
+    if(fast == null || fast.next == null) return null;
+
+    slow = this.head;
+    while(slow != fast){
+      slow = slow.next;
+      fast = fast.next;
+    }
+    return fast;
+  }
+
+  public Node<T> intersectionLinkedLists(LinkedList<T> linkedList){
+    int diff = this.size() - linkedList.size();
+    int skip = Math.abs(diff);
+    Node<T> big = this.head;
+    Node<T> small = linkedList.head;
+    if (diff < 0){
+      big = linkedList.head;
+      small = this.head;
+    }
+    for(int i = 0; i < skip; i++){
+      big = big.next;
+    }
+    while(big.next != small.next){
+      big = big.next;
+      small = small.next;
+    }
+    return big.next;
+  }
+
+  public int addition (int a, int b){
+    if(b == 0) return a;
+    int sum = a ^ b;
+    int carry = (a & b) << 1;
+    return addition(sum, carry);
   }
 
 }

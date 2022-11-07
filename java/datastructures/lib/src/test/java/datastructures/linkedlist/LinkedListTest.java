@@ -173,4 +173,44 @@ public class LinkedListTest
     assertEquals("hi", sut.midNodeValue());
   }
 
+  @Test void circle(){
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(2);
+    sut.endAppend(4);
+    sut.endAppend(5);
+    sut.endAppend(6);
+    sut.endAppend(7);
+    sut.endAppend(10);
+    sut.head.next.next.next.next.next.next = sut.head.next.next;
+    assertEquals(5, (int) sut.cyclicLinkedList().value);
+  }
+
+  @Test void circleEmpty(){
+    LinkedList<Integer> sut = new LinkedList<>();
+    assertNull(sut.cyclicLinkedList());
+  }
+
+  @Test void intersection(){
+    LinkedList<Integer> sut = new LinkedList<>();
+    sut.insert(2);
+    sut.endAppend(4);
+    sut.endAppend(5);
+    sut.endAppend(6);
+    sut.endAppend(7);
+    sut.endAppend(10);
+    LinkedList<Integer> idk = new LinkedList<>();
+    idk.insert(2);
+    idk.endAppend(4);
+    idk.endAppend(7);
+    idk.head.next.next.next = sut.head.next.next;
+    System.out.println(sut);
+    System.out.println(idk);
+    assertEquals(5, sut.intersectionLinkedLists(idk).value);
+  }
+
+  @Test void addTest(){
+    LinkedList<Integer> sut = new LinkedList<>();
+    assertEquals(23, sut.addition(20, 3));
+  }
+
 }
