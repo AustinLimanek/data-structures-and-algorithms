@@ -14,12 +14,12 @@ public class Stack<T> {
     this.top = newNode;
   }
 
-  public T pop (){
+  public Node<T> pop (){
     if (this.top == null) throw new NullPointerException("The stack is empty");
     Node<T> temp = this.top;
     top = top.next;
     temp.next = null;
-    return temp.value;
+    return temp;
   }
 
   public T peek(){

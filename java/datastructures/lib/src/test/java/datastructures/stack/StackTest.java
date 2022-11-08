@@ -28,7 +28,7 @@ public class StackTest {
     sut.push("comet");
     sut.push("is");
     sut.push("what");
-    assertEquals("what", sut.pop());
+    assertEquals("what", sut.pop().value);
     assertEquals("is", sut.top.value);
     assertEquals("comet", sut.top.next.value);
   }
@@ -41,7 +41,7 @@ public class StackTest {
     sut.push("cute");
     sut.pop();
     sut.pop();
-    assertEquals("comet", sut.pop());
+    assertEquals("comet", sut.pop().value);
     assertNull(sut.top);
   }
 
