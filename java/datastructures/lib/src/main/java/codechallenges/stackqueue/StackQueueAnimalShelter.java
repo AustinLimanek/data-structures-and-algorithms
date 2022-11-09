@@ -3,6 +3,8 @@ package codechallenges.stackqueue;
 import datastructures.linkedlist.Node;
 import datastructures.stack.Stack;
 
+import java.util.Objects;
+
 public class StackQueueAnimalShelter <String>{
 
   final private Stack<String> left = new Stack<>();
@@ -42,4 +44,8 @@ public class StackQueueAnimalShelter <String>{
     return adopt;
   }
 
+
+  public Stack<String> getLeft() {
+    return left;
+  }
 }
