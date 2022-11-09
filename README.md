@@ -34,4 +34,4 @@ To run your tests
 | [Interview Practice: 2D Array Inner-Array Sum](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/2DArrayMatrixInnerElementArraySum-readme.md)
 | [Whiteboarding: Zipping Two Singly Linked Lists](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/zipperTwoLinkedLists.md)
 | [Whiteboarding: Pseudo Queue](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/pseudoqueue.md)
-| [Whiteboarding: Pseudo Queue](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueueanimalshelter.md)
+| [Whiteboarding: Stack Queue Animal Shelter](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueueanimalshelter.md)
