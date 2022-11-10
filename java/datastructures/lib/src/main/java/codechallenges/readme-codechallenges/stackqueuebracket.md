@@ -1,4 +1,4 @@
-# Challenge Summary: Stack Queue Animal Shelter
+# Challenge Summary: Stack Queue Brackets
 
 Write a function that will take in a string and determine if the string contains any brackets that are not closed appropriately. Brackets can be either `{}`, `[]`, or `()`. Brackets must first open in the string before a closed bracket of that type appears in the string. Brackets can be nested, however, the inner nested brackets must close before the outer nested brackets close.
 
