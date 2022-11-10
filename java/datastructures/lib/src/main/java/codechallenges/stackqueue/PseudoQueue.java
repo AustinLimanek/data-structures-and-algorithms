@@ -31,6 +31,19 @@ public void enqueue(T value){
   }
 }
 
+  public Stack<T> getLeft() {
+    return left;
+  }
 
+  public void setLeft(Stack<T> left) {
+    this.left = left;
+  }
 
+  public Stack<T> getRight() {
+    return right;
+  }
+
+  public void setRight(Stack<T> right) {
+    this.right = right;
+  }
 }

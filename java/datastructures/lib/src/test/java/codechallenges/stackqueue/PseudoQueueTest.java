@@ -2,6 +2,7 @@ package codechallenges.stackqueue;
 
 import org.junit.jupiter.api.Test;
 
+import static codechallenges.stackqueue.StackQueueBrackets.bracketValidation;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PseudoQueueTest {
@@ -40,6 +41,18 @@ public class PseudoQueueTest {
     test.enqueue("you");
     test.dequeue();
     assertEquals("to", test.left.peek());
+  }
+
+  @Test void brackets(){
+    assertTrue(bracketValidation("()[[Extra Characters]]"));
+    assertTrue(bracketValidation("(){}[[]]"));
+    assertTrue(bracketValidation("{}{Code}[Fellows](())"));
+    assertFalse(bracketValidation("[({}]"));
+    assertFalse(bracketValidation("(]("));
+    assertFalse(bracketValidation("{(])"));
+    assertFalse(bracketValidation("{"));
+    assertFalse(bracketValidation(")"));
+    assertFalse(bracketValidation("[}"));
   }
 
 }
