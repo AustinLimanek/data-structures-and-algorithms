@@ -35,3 +35,4 @@ To run your tests
 | [Whiteboarding: Zipping Two Singly Linked Lists](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/zipperTwoLinkedLists.md)
 | [Whiteboarding: Pseudo Queue](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/pseudoqueue.md)
 | [Whiteboarding: Stack Queue Animal Shelter](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueueanimalshelter.md)
+| [Whiteboarding: Stack Queue Brackets](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueuebracket.md)
