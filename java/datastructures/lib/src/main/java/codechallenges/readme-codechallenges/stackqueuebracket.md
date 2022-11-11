@@ -12,7 +12,7 @@ This method calls upon a double stack approach that is accessed through the `Pse
 
 The left stack will take new nodes as long as certain conditions are met. First, the incoming value must be a non-bracket character or correspond to the bracket on the top of the right stack.
 
-The time complexity is O(n) where n is the number of characters in the input string. The space complexity is also O(n) for the same reason. 
+The time complexity is O(n) where n is the number of characters in the input string. The space complexity is also O(n) for the same reason.
 
 
 ## Solution
