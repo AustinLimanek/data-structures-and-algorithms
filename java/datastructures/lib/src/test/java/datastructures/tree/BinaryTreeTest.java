@@ -1,7 +1,7 @@
 package datastructures.tree;
-
 import org.junit.jupiter.api.Test;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BinaryTreeTest {
@@ -72,6 +72,42 @@ public class BinaryTreeTest {
     assertTrue(bst.contains(8));
     assertTrue(bst.contains(3));
     assertFalse(bst.contains(42));
+  }
+
+  @Test
+  public void preOrderBinaryTree(){
+    BinarySearchTree bst = new BinarySearchTree(6);
+    bst.add(5);
+    bst.add(10);
+    bst.add(8);
+    bst.add(3);
+    ArrayList<Integer> array = new ArrayList<>();
+    ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(6,5,3,10,8));
+    assertEquals(expected, bst.preOrder(array, bst.getRoot()));
+  }
+
+  @Test
+  public void inOrderBinaryTree(){
+    BinarySearchTree bst = new BinarySearchTree(6);
+    bst.add(5);
+    bst.add(10);
+    bst.add(8);
+    bst.add(3);
+    ArrayList<Integer> array = new ArrayList<>();
+    ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(3,5,6,8,10));
+    assertEquals(expected, bst.inOrder(array, bst.getRoot()));
+  }
+
+  @Test
+  public void postOrderBinaryTree(){
+    BinarySearchTree bst = new BinarySearchTree(6);
+    bst.add(5);
+    bst.add(10);
+    bst.add(8);
+    bst.add(3);
+    ArrayList<Integer> array = new ArrayList<>();
+    ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(3,5,8,10,6));
+    assertEquals(expected, bst.postOrder(array, bst.getRoot()));
   }
 
 }
