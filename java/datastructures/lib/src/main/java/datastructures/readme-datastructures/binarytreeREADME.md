@@ -22,9 +22,9 @@ Nodes contain a value of type `Integer`. This class has the fields of `left` and
 
 `BinaryTree` class the field of `root` of type `Node`. There are two possible constructors: one with 0 arguments that has a root with a value of `null`, and one with a single argument of type `Integer` with the root taking on the value of the argument.
 
-- preOrder(): a method that returns an `ArrayList<Integer>`. The array is ordered following `root -> left -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
-- inOrder(): a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> root -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
-- postOrder(): a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> right -> root`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
+- `preOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `root -> left -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
+- `inOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> root -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
+- `postOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> right -> root`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
 
 ### Binary Search Tree
 
