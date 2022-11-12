@@ -37,10 +37,10 @@ Extends `BinaryTree` and inherits both constructors with no additions. However, 
 
 [Testing Code](../../../../test/java/datastructures/tree/BinaryTreeTest.java)
 
--[x] Can successfully instantiate an empty tree
--[x] Can successfully instantiate a tree with a single root node
--[x] For a Binary Search Tree, can successfully add a left child and right child properly to a node
--[x] Can successfully return a collection from a preorder traversal
--[x] Can successfully return a collection from an inorder traversal
--[x] Can successfully return a collection from a postorder traversal
--[x] Returns true	false for the contains method, given an existing or non-existing node value
+- [x] Can successfully instantiate an empty tree
+- [x] Can successfully instantiate a tree with a single root node
+- [x] For a Binary Search Tree, can successfully add a left child and right child properly to a node
+- [x] Can successfully return a collection from a preorder traversal
+- [x] Can successfully return a collection from an inorder traversal
+- [x] Can successfully return a collection from a postorder traversal
+- [x] Returns true	false for the contains method, given an existing or non-existing node value
