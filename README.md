@@ -25,6 +25,7 @@ To run your tests
 | [Implementation: Singly Linked List](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/singleLinkedListREADME.md)
 | [Implementation: Stack](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/stackREADME.md)
 | [Implementation: Queue](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/queueREADME.md)
+| [Implementation: Binary Tree](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/binarytreeREADME.md)
 
 | Table of Contents - Code Challenges |
 | ------------------------------- |
