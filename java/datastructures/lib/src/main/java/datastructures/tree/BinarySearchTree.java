@@ -1,6 +1,6 @@
 package datastructures.tree;
 
-public class BinarySearchTree extends BinaryTree{
+public class BinarySearchTree<T> extends BinaryTree<T>{
 
   public BinarySearchTree(Integer value) {
     super(value);
@@ -10,12 +10,12 @@ public class BinarySearchTree extends BinaryTree{
   }
 
   public void add(Integer value){
-    Node newNode = new Node(value);
+    Node<T> newNode = new Node<T>(value);
     if (this.getRoot() == null){
       this.setRoot(newNode);
       return;
     }
-    Node current = this.getRoot();
+    Node<T> current = this.getRoot();
     while(current != null){
       if (value < current.getValue()){
         if(current.getLeft() == null){
@@ -41,7 +41,7 @@ public class BinarySearchTree extends BinaryTree{
 
   public boolean contains(Integer value){
     if (this.getRoot() == null) return false;
-    Node current = this.getRoot();
+    Node<T> current = this.getRoot();
     while(current != null){
       if (value < current.getValue()){
         if(current.getLeft() == null){

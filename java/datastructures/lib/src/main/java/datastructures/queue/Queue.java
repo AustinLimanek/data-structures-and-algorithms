@@ -1,7 +1,6 @@
 package datastructures.queue;
 
 import datastructures.linkedlist.Node;
-
 public class Queue<T> {
 
   public Node<T> front;
