@@ -25,6 +25,10 @@ Nodes contain a value of type `Integer`. This class has the fields of `left` and
 - `preOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `root -> left -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
 - `inOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> root -> right`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
 - `postOrder()`: a method that returns an `ArrayList<Integer>`. The array is ordered following `left -> right -> root`. This method recursively adds the nodes to the array. [Space O(n); Time O(n)]
+- `treeMax()`: a method that returns an `Integer` that is the max value of the binary tree. This is done by using a breadth first search type algorithm. [Space O(n); Time O(n)]
+
+![treeMax() methods whiteboard](../../codechallenges/readme-codechallenges/images/treeMax.png)
+![treeMax() code](../../codechallenges/readme-codechallenges/images/treemaxcode.png)
 
 ### Binary Search Tree
 
@@ -44,3 +48,6 @@ Extends `BinaryTree` and inherits both constructors with no additions. However, 
 - [x] Can successfully return a collection from an inorder traversal
 - [x] Can successfully return a collection from a postorder traversal
 - [x] Returns true	false for the contains method, given an existing or non-existing node value
+- [x] Return a null for `treeMax()` when a binary tree is empty
+- [x] Return the value at the root for `treeMax()` when the binary tree only has one node
+- [x] Returns the correct max value from a binary tree of many nodes
