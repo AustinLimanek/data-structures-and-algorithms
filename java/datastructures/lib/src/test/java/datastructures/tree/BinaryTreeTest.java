@@ -110,4 +110,11 @@ public class BinaryTreeTest {
     assertEquals(expected, bst.postOrder(array, bst.getRoot()));
   }
 
+  @Test
+  public void arrays(){
+    KTree oak = new KTree(3, 7);
+    oak.add(6);
+    System.out.println(oak.getRoot().getKnodeArray()[1]);
+  }
+
 }
