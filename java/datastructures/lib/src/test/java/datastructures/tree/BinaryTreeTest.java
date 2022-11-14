@@ -8,38 +8,38 @@ public class BinaryTreeTest {
 
   @Test
   public void initializeEmptyBinaryTree(){
-    BinaryTree bt = new BinaryTree();
+    BinaryTree<Integer> bt = new BinaryTree<>();
     assertNull(bt.getRoot());
   }
 
   @Test
   public void initializeSingleNodeBinaryTree(){
-    BinaryTree bt = new BinaryTree(5);
+    BinaryTree<Integer> bt = new BinaryTree<>(5);
     assertEquals(5, bt.getRoot().getValue());
   }
 
   @Test
   public void initializeEmptyBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree();
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>();
     assertNull(bst.getRoot());
   }
 
   @Test
   public void initializeSingleNodeBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree(5);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(5);
     assertEquals(5, bst.getRoot().getValue());
   }
 
   @Test
   public void addToEmptyBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree();
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>();
     bst.add(5);
     assertEquals(5, bst.getRoot().getValue());
   }
 
   @Test
   public void addToSingleNodeBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     assertEquals(6, bst.getRoot().getValue());
     assertEquals(5, bst.getRoot().getLeft().getValue());
@@ -47,7 +47,7 @@ public class BinaryTreeTest {
 
   @Test
   public void addSeveralBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -61,7 +61,7 @@ public class BinaryTreeTest {
 
   @Test
   public void containsForBinarySearchTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -76,7 +76,7 @@ public class BinaryTreeTest {
 
   @Test
   public void preOrderBinaryTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -88,7 +88,7 @@ public class BinaryTreeTest {
 
   @Test
   public void inOrderBinaryTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -100,7 +100,7 @@ public class BinaryTreeTest {
 
   @Test
   public void postOrderBinaryTree(){
-    BinarySearchTree bst = new BinarySearchTree(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -115,6 +115,26 @@ public class BinaryTreeTest {
     KTree oak = new KTree(3, 7);
     oak.add(6);
     System.out.println(oak.getRoot().getKnodeArray()[1]);
+  }
+
+  //testing for the treeMax method: the next three tests
+  @Test void maxOfOne(){
+    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>(6);
+    assertEquals(6, bst.treeMax());
+  }
+
+  @Test void maxOfMany(){
+    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>(6);
+    bst.add(5);
+    bst.add(10);
+    bst.add(8);
+    bst.add(3);
+    assertEquals(10, bst.treeMax());
+  }
+
+  @Test void maxNull(){
+    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
+    assertNull(bst.treeMax());
   }
 
 }

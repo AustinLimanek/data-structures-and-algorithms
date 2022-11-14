@@ -1,10 +1,10 @@
 package datastructures.tree;
 
-public class Node {
+public class Node<T> {
 
   private Integer value;
-  private Node left;
-  private Node right;
+  private Node<T> left;
+  private Node<T> right;
 
   public Node(Integer value) {
     this.value = value;
@@ -18,19 +18,19 @@ public class Node {
     this.value = value;
   }
 
-  public Node getLeft() {
+  public Node<T> getLeft() {
     return left;
   }
 
-  public void setLeft(Node left) {
+  public void setLeft(Node<T> left) {
     this.left = left;
   }
 
-  public Node getRight() {
+  public Node<T> getRight() {
     return right;
   }
 
-  public void setRight(Node right) {
+  public void setRight(Node<T> right) {
     this.right = right;
   }
 }
