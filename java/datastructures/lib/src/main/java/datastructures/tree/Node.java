@@ -2,19 +2,19 @@ package datastructures.tree;
 
 public class Node<T> {
 
-  private Integer value;
+  private T value;
   private Node<T> left;
   private Node<T> right;
 
-  public Node(Integer value) {
+  public Node(T value) {
     this.value = value;
   }
 
-  public Integer getValue() {
+  public T getValue() {
     return value;
   }
 
-  public void setValue(Integer value) {
+  public void setValue(T value) {
     this.value = value;
   }
 
