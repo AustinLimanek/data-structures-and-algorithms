@@ -2,14 +2,14 @@ package datastructures.tree;
 
 public class BinarySearchTree<T> extends BinaryTree<T>{
 
-  public BinarySearchTree(Integer value) {
+  public BinarySearchTree(T value) {
     super(value);
   }
 
   public BinarySearchTree() {
   }
 
-  public void add(Integer value){
+  public void add(T value){
     Node<T> newNode = new Node<T>(value);
     if (this.getRoot() == null){
       this.setRoot(newNode);
@@ -17,7 +17,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
     }
     Node<T> current = this.getRoot();
     while(current != null){
-      if (value < current.getValue()){
+      if ((Integer) value <  (Integer)current.getValue()){
         if(current.getLeft() == null){
           current.setLeft(newNode);
         }
@@ -25,7 +25,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
           current = current.getLeft();
         }
       }
-      else if(value > current.getValue()){
+      else if((Integer)value > (Integer)current.getValue()){
         if(current.getRight() == null){
           current.setRight(newNode);
         }
@@ -43,7 +43,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
     if (this.getRoot() == null) return false;
     Node<T> current = this.getRoot();
     while(current != null){
-      if (value < current.getValue()){
+      if ((Integer)value < (Integer)current.getValue()){
         if(current.getLeft() == null){
           return false;
         }
@@ -51,7 +51,7 @@ public class BinarySearchTree<T> extends BinaryTree<T>{
           current = current.getLeft();
         }
       }
-      else if(value > current.getValue()){
+      else if((Integer)value > (Integer)current.getValue()){
         if(current.getRight() == null){
           return false;
         }

@@ -7,7 +7,7 @@ public class BinaryTree<T> {
 
   private Node<T> root;
 
-  public BinaryTree(Integer value) {
+  public BinaryTree(T value) {
     this.root = new Node<T>(value);
   }
 
@@ -15,7 +15,7 @@ public class BinaryTree<T> {
     this.root = null;
   }
 
-  public ArrayList<Integer> preOrder(ArrayList<Integer> array, Node<T> node){
+  public ArrayList<T> preOrder(ArrayList<T> array, Node<T> node){
     if(node == null) return array;
 
     array.add(node.getValue());
@@ -25,7 +25,7 @@ public class BinaryTree<T> {
     return array;
   }
 
-  public ArrayList<Integer> inOrder(ArrayList<Integer> array, Node<T> node){
+  public ArrayList<T> inOrder(ArrayList<T> array, Node<T> node){
     if(node == null) return array;
 
     inOrder(array, node.getLeft());
@@ -35,7 +35,7 @@ public class BinaryTree<T> {
     return array;
   }
 
-  public ArrayList<Integer> postOrder(ArrayList<Integer> array, Node<T> node){
+  public ArrayList<T> postOrder(ArrayList<T> array, Node<T> node){
     if(node == null) return array;
 
     postOrder(array, node.getLeft());
@@ -47,7 +47,7 @@ public class BinaryTree<T> {
 
   public Integer treeMax(){
     if (this.root == null) return null;
-    Integer max = this.root.getValue();
+    Integer max = (Integer) this.root.getValue();
     Queue<Node<T>> queue = new Queue<>();
     queue.enqueue(this.root);
     while(!queue.isEmpty()){
@@ -57,8 +57,8 @@ public class BinaryTree<T> {
       if(queue.front.value.getRight() != null){
         queue.enqueue(queue.front.value.getRight());
       }
-      if(queue.front.value.getValue() > max){
-        max = queue.front.value.getValue();
+      if((Integer) queue.front.value.getValue() > max){
+        max = (Integer) queue.front.value.getValue();
       }
       queue.dequeue();
     }
