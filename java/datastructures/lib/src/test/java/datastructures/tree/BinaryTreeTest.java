@@ -110,21 +110,14 @@ public class BinaryTreeTest {
     assertEquals(expected, bst.postOrder(array, bst.getRoot()));
   }
 
-  @Test
-  public void arrays(){
-    KTree oak = new KTree(3, 7);
-    oak.add(6);
-    System.out.println(oak.getRoot().getKnodeArray()[1]);
-  }
-
   //testing for the treeMax method: the next three tests
   @Test void maxOfOne(){
-    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     assertEquals(6, bst.treeMax());
   }
 
   @Test void maxOfMany(){
-    BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>(6);
+    BinarySearchTree<Integer> bst = new BinarySearchTree<>(6);
     bst.add(5);
     bst.add(10);
     bst.add(8);
@@ -136,5 +129,38 @@ public class BinaryTreeTest {
     BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
     assertNull(bst.treeMax());
   }
+
+  @Test
+  public void KTreeAddition(){
+    KTree<Integer> oak = new KTree<>(3, 7);
+    oak.add(6);
+    oak.add(10);
+    oak.add(22);
+    oak.add(13);
+    System.out.println(oak.getRoot().getValue());
+    System.out.println(oak.getRoot().getKnodeArray()[0].getValue());
+    System.out.println(oak.getRoot().getKnodeArray()[1].getValue());
+    System.out.println(oak.getRoot().getKnodeArray()[2].getValue());
+    System.out.println(oak.getRoot().getKnodeArray()[0].getKnodeArray()[0].getValue());
+    System.out.println(oak.printBreadth());
+  }
+
+  @Test
+  public void fizzBuzzTree(){
+    KTree<Integer> oak = new KTree<>(3, 7);
+    oak.add(6);
+    oak.add(10);
+    oak.add(22);
+    oak.add(13);
+    oak.add(30);
+    oak.add(60);
+    oak.add(100);
+    KTree<String> test = oak.treeFizzBuzz();
+    ArrayList<String> expected = new ArrayList<>(Arrays.asList("7", "Fizz", "Buzz", "22", "13", "FizzBuzz", "FizzBuzz", "Buzz"));
+    assertEquals(expected, test.printBreadth());
+    System.out.println(oak.printBreadth());
+    System.out.println(test.printBreadth());
+  }
+
 
 }
