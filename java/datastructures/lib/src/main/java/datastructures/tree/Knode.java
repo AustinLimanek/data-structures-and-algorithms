@@ -1,12 +1,12 @@
 package datastructures.tree;
 
-public class Knode {
+public class Knode <T>{
 
-  private int k;
-  private Integer value;
-  private Knode[] knodeArray;
+  private final int k;
+  private T value;
+  private final Knode<T>[] knodeArray;
 
-  public Knode(int k, Integer value) {
+  public Knode(int k, T value) {
     this.k = k;
     this.value = value;
     this.knodeArray = new Knode[k];
@@ -16,15 +16,15 @@ public class Knode {
     return k;
   }
 
-  public Integer getValue() {
+  public T getValue() {
     return value;
   }
 
-  public void setValue(Integer value) {
+  public void setValue(T value) {
     this.value = value;
   }
 
-  public Knode[] getKnodeArray() {
+  public Knode<T>[] getKnodeArray() {
     return knodeArray;
   }
 }
