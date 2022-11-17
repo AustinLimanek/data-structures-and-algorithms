@@ -38,3 +38,4 @@ To run your tests
 | [Whiteboarding: Pseudo Queue](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/pseudoqueue.md)
 | [Whiteboarding: Stack Queue Animal Shelter](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueueanimalshelter.md)
 | [Whiteboarding: Stack Queue Brackets](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueuebracket.md)
+| [Whiteboarding: Tree FizzBuzz](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/treefizzbuzz.md)
