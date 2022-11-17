@@ -67,7 +67,7 @@ public class KTree <T>{
     if((value % 5) == 0){
       output.append("Buzz");
     }
-    if(output.isEmpty()) output.append(value);
+    if(output.length() == 0) output.append(value);
     return output.toString();
   }
 
