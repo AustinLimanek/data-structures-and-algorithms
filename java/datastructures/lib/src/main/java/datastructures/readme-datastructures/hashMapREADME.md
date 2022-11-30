@@ -15,7 +15,7 @@ Construct a hash map that is follows the architecture of an ArrayList that conta
 - [x] boolean peek K: Takes in a key and determines whether that key can be located in the hashmap. The return is a boolean. [Space O(1); Time O(1)]
 - [x] List<K> keys void: The method returns all the keys in the hashmap. There are only unique keys in the hashmap.  [Space O(N); Time O(N), where N is the size of the hashmap]
 - [x] String toString void: Returns a string for the hashmap. [Space O(1); Time O(N), where N is the size of the hashmap]
--
+
 ## Specifications & Tests
 
 - [x] Setting a key/value to your hashtable results in the value being in the data structure
