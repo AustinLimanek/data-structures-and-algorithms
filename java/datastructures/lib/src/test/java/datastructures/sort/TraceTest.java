@@ -20,4 +20,11 @@ public class TraceTest {
     ArrayList<Integer> array = new ArrayList<>(Arrays.asList(8,4,23,-42,16,-15));
     assertEquals(new ArrayList<>(Arrays.asList(-42,-15,4,8,16,23 )), trace.traceArray(array));
   }
+
+  @Test void mergeSortTest(){
+    Trace trace = new Trace();
+    ArrayList<Integer> array = new ArrayList<>(Arrays.asList(8,4,23,-42,16,-15));
+    trace.mergeSortArray(array);
+    assertEquals(new ArrayList<>(Arrays.asList(-42,-15,4,8,16,23 )), array);
+  }
 }
