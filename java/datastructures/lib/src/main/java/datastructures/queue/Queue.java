@@ -47,4 +47,12 @@ public class Queue<T> {
     return front.value;
   }
 
+  public Node<T> getFront() {
+    return front;
+  }
+
+  public Node<T> getBack() {
+    return back;
+  }
+
 }
