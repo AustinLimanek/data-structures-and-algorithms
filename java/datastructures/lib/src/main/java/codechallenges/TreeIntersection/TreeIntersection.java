@@ -48,7 +48,4 @@ public class TreeIntersection {
     return answer;
   }
 
-
-
-
 }
