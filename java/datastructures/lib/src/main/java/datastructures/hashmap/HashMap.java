@@ -93,4 +93,20 @@ public class HashMap<K, V>
     }
     return sB.toString();
   }
+
+  public ArrayList<LinkedList<HashMapPair<K, V>>> getBucketArrayList() {
+    return bucketArrayList;
+  }
+
+  public void setBucketArrayList(ArrayList<LinkedList<HashMapPair<K, V>>> bucketArrayList) {
+    this.bucketArrayList = bucketArrayList;
+  }
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
 }
