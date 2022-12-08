@@ -40,3 +40,4 @@ To run your tests
 | [Whiteboarding: Stack Queue Animal Shelter](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueueanimalshelter.md)
 | [Whiteboarding: Stack Queue Brackets](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/stackqueuebracket.md)
 | [Whiteboarding: Tree FizzBuzz](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/treefizzbuzz.md)
+| [Whiteboarding: Hash Map Join](./java//datastructures/lib/src/main/java/codechallenges/readme-codechallenges/hashmapjoin.md)
