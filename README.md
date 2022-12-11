@@ -28,6 +28,7 @@ To run your tests
 | [Implementation: Binary Tree](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/binarytreeREADME.md)
 | [Implementation Extension: Binary Tree](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/binarytreeREADME.md)
 | [Implementation Hash Map](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/hashMapREADME.md)
+| [Implementation Graph](./java/datastructures/lib/src/main/java/datastructures/readme-datastructures/graphreadme.md)
 
 | Table of Contents - Code Challenges |
 | ------------------------------- |
