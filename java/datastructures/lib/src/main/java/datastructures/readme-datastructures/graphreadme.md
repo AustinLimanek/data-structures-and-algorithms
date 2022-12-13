@@ -16,6 +16,7 @@ Implement a graph that is based on an adjacency matrix. The rows are labeled by 
 - [x] getNeighbors: pulls from a given key each of the connections for a given vertex [Space O(1); Time O(1)]
 - [x] size: returns the number of uniques vertices in the graph [Space O(1); Time O(1)]
 - [x] toString: prints the vertices followed by their unidirectional edges to other vertices in the graph. [Space O(V*E); Time O(1)]
+- [x] printBFS: Returns the values of the vertices in the order corresponding to breadth first search. [Space O(V); Time O(V+E)]
 
 ## Specifications & Tests
 
@@ -28,3 +29,9 @@ Implement a graph that is based on an adjacency matrix. The rows are labeled by 
 - [x] Neighbors are returned with the weight between nodes included
 - [x] The proper size is returned, representing the number of nodes in the graph
 - [x] A graph with only one node and edge can be properly returned
+
+### Day 2 - Added a printBFS method
+
+- [x] Graph has the appropriate size regardless of the number of edges add to the graph
+- [x] The output of printBFS matches the number of vertices in the graph
+- [x] Breadth first search order is achieved

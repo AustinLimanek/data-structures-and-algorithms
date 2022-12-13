@@ -1,12 +1,13 @@
 package datastructures.graph;
 
-
-import java.beans.VetoableChangeListener;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
 import datastructures.graph.Edge;
 import datastructures.graph.Vertex;
+import datastructures.queue.Queue;
 
 public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<T>>  // just in case you have Comparable data structures
 {
@@ -70,6 +71,28 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
       output.append("\n");
     }
     return output.toString();
+  }
+
+  public LinkedHashSet<T> printBFS(Vertex<T> start){
+
+    Queue<Vertex<T>> line = new Queue<>();
+    LinkedHashSet<Vertex<T>> visited = new LinkedHashSet<>();
+    LinkedHashSet<T> visitedT = new LinkedHashSet<>();
+
+    line.enqueue(start);
+    visited.add(start);
+    visitedT.add(start.value);
+
+    while(!line.isEmpty()){
+      for(Edge<T> edge : this.getNeighbors(line.dequeue())){
+        if(!visited.contains(edge.getDestination())){
+          visited.add(edge.getDestination());
+          visitedT.add(edge.getDestination().value);
+          line.enqueue(edge.getDestination());
+        }
+      }
+    }
+    return visitedT;
   }
 
 }
