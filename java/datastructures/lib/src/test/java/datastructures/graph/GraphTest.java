@@ -206,4 +206,46 @@ public class GraphTest {
     assertNull(fullGraph.costOfTrip(expected));
   }
 
+  @Test
+  public void depthFirst(){
+    Graph<String> fullGraph = initfullGraph();
+    ArrayList<String> expected = new ArrayList<>(List.of("Pandora", "Arendelle", "Metroville", "Monstropolis", "Naboo", "Narnia"));
+    assertEquals(expected, fullGraph.depthFirstPrint("Pandora"));
+  }
+
+  @Test
+  public void depth(){
+
+    Graph<String> fullGraph = new Graph<>(10);
+    Vertex<String> a = fullGraph.addVertex("A");
+    Vertex<String> b = fullGraph.addVertex("B");
+    Vertex<String> c = fullGraph.addVertex("C");
+    Vertex<String> d = fullGraph.addVertex("D");
+    Vertex<String> e = fullGraph.addVertex("E");
+    Vertex<String> f = fullGraph.addVertex("F");
+    Vertex<String> g = fullGraph.addVertex("G");
+    Vertex<String> h = fullGraph.addVertex("H");
+    fullGraph.addEdge(a, b);
+    fullGraph.addEdge(a, d);
+    fullGraph.addEdge(b, a);
+    fullGraph.addEdge(b, c);
+    fullGraph.addEdge(b, d);
+    fullGraph.addEdge(c, b);
+    fullGraph.addEdge(c, g);
+    fullGraph.addEdge(d, a);
+    fullGraph.addEdge(d, b);
+    fullGraph.addEdge(d, e);
+    fullGraph.addEdge(d, h);
+    fullGraph.addEdge(d, f);
+    fullGraph.addEdge(e, d);
+    fullGraph.addEdge(h, d);
+    fullGraph.addEdge(h, f);
+    fullGraph.addEdge(f, d);
+    fullGraph.addEdge(f, h);
+    fullGraph.addEdge(g, c);
+
+    ArrayList<String> expected = new ArrayList<>(List.of("A", "B", "C", "G", "D", "E", "H", "F"));
+    assertEquals(expected, fullGraph.depthFirstPrint("A"));
+  }
+
 }

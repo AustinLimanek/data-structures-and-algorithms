@@ -1,6 +1,8 @@
 package datastructures.graph;
 
+import java.lang.reflect.Array;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import datastructures.graph.Edge;
 import datastructures.graph.Vertex;
@@ -134,6 +136,31 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
     }
 
     return cost;
+  }
+
+  public ArrayList<T> depthFirstPrint(T value){
+    Vertex<T> start = this.getVertices().stream().filter(v-> v.value.equals(value)).toList().get(0);
+    HashSet<Vertex<T>> visited = new HashSet<>();
+    ArrayList<T> order = new ArrayList<>();
+    visited.add(start);
+    order.add(start.value);
+
+    depthFirst(start, visited, order);
+
+    return order;
+  }
+
+  private void depthFirst(Vertex<T> vertex, HashSet<Vertex<T>> visited, ArrayList<T> order){
+    if (visited.containsAll(this.getNeighbors(vertex).stream().map(v->v.destination).toList())) return;
+
+    for(Edge<T> edge : this.getNeighbors(vertex)){
+
+        if(!visited.contains(edge.destination)){
+          visited.add(edge.destination);
+          order.add(edge.destination.value);
+          depthFirst(edge.destination, visited, order);
+        }
+    }
   }
 
 }
