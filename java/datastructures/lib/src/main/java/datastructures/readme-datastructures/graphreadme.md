@@ -35,3 +35,9 @@ Implement a graph that is based on an adjacency matrix. The rows are labeled by 
 - [x] Graph has the appropriate size regardless of the number of edges add to the graph
 - [x] The output of printBFS matches the number of vertices in the graph
 - [x] Breadth first search order is achieved
+
+### Day 3 - Trip Cost
+
+- [x] returns null if the input array is empty or does not have a matching name with that of the graph
+- [x] returns the total cost of trip for one way, two-way, and many linked destination trips
+- [x] single city itinerary returns null
