@@ -1,9 +1,6 @@
 package datastructures.graph;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
+import java.util.*;
 
 import datastructures.graph.Edge;
 import datastructures.graph.Vertex;
@@ -93,6 +90,50 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
       }
     }
     return visitedT;
+  }
+
+  public Integer costOfTrip(ArrayList<T> vertices){
+
+    if(vertices.size() < 2) return null;
+
+    Vertex<T> current = null;
+    int cost = 0;
+
+    for(Vertex<T> vertex : this.getVertices()){
+      if(vertex.value.equals(vertices.get(0))){
+        current = vertex;
+        break;
+      }
+    }
+
+    if(current == null) return null;
+
+    Queue<Vertex<T>> line = new Queue<>();
+    int nextNode = 1;
+
+    line.enqueue(current);
+    boolean state;
+
+    while(!line.isEmpty()){
+
+      state = false;
+
+      for(Edge<T> edge : this.getNeighbors(line.dequeue())){
+        if(edge.destination.value.equals(vertices.get(nextNode))){
+          cost += edge.weight;
+          nextNode += 1;
+          line.enqueue(edge.getDestination());
+          state = true;
+          break;
+        }
+      }
+
+      if (!state) return null;
+      if(nextNode == vertices.size()) break;
+
+    }
+
+    return cost;
   }
 
 }
