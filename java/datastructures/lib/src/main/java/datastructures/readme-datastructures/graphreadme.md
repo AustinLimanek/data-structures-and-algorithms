@@ -17,6 +17,7 @@ Implement a graph that is based on an adjacency matrix. The rows are labeled by 
 - [x] size: returns the number of uniques vertices in the graph [Space O(1); Time O(1)]
 - [x] toString: prints the vertices followed by their unidirectional edges to other vertices in the graph. [Space O(V*E); Time O(1)]
 - [x] printBFS: Returns the values of the vertices in the order corresponding to breadth first search. [Space O(V); Time O(V+E)]
+- [x] depthFirstPrint: Returns the values of the vertices in the order corresponding to depth first search. [Space O(V); Time O(V+E)]
 
 ## Specifications & Tests
 
@@ -43,3 +44,8 @@ Implement a graph that is based on an adjacency matrix. The rows are labeled by 
 - [x] returns null if the input array is empty or does not have a matching name with that of the graph
 - [x] returns the total cost of trip for one way, two-way, and many linked destination trips
 - [x] single city itinerary returns null
+
+### Day 4 - Depth First Search
+
+- [x] Input a value for the node you want to start
+- [x] Returns an ArrayList of the values from the visited nodes in the order of depth first search
