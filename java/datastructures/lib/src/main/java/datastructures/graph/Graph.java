@@ -153,7 +153,7 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   }
 
   private void depthFirst(Vertex<T> vertex, HashSet<Vertex<T>> visited, ArrayList<T> order){
-    if (visited.containsAll(this.getNeighbors(vertex).stream().map(v->v.destination).toList())) return;
+    if (visited.containsAll(this.getNeighbors(vertex).stream().map(v->v.destination).collect(Collectors.toList()))) return;
 
     for(Edge<T> edge : this.getNeighbors(vertex)){
 
