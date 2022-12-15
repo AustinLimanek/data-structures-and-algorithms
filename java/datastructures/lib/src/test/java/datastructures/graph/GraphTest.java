@@ -248,4 +248,16 @@ public class GraphTest {
     assertEquals(expected, fullGraph.depthFirstPrint("A"));
   }
 
+  @Test
+  public void depthEmptyGraph(){
+    Graph<String> fullGraph = new Graph<>(10);
+    assertNull(fullGraph.depthFirstPrint("Pandora"));
+  }
+
+  @Test
+  public void wrongGraph(){
+    Graph<String> fullGraph = initfullGraph();
+    assertNull(fullGraph.depthFirstPrint("Seattle"));
+  }
+
 }
