@@ -139,7 +139,8 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   }
 
   public ArrayList<T> depthFirstPrint(T value){
-    List<Vertex<T>> check = this.getVertices().stream().filter(v-> v.value.equals(value)).toList();
+
+    List<Vertex<T>> check = this.getVertices().stream().filter(v-> v.value.equals(value)).collect(Collectors.toList());
     if (check.size() < 1) return null;
     Vertex<T> start = check.get(0);
     HashSet<Vertex<T>> visited = new HashSet<>();
@@ -153,7 +154,6 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   }
 
   private void depthFirst(Vertex<T> vertex, HashSet<Vertex<T>> visited, ArrayList<T> order){
-    if(this.getNeighbors(vertex).size() < 1) return;
     if (visited.containsAll(this.getNeighbors(vertex).stream().map(v->v.destination).toList())) return;
 
     for(Edge<T> edge : this.getNeighbors(vertex)){
